@@ -1,0 +1,37 @@
+/* Google Fonts – used in tailwind.config (e.g. font-cursive, font-cursive2) */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&family=Sriracha&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom keyframe: slow 360° rotation. Used by .spin on hero/banner images */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin {
+  animation: spin 40s linear infinite;
+}
+
+/* Custom keyframe: fade in animation for preloader transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Smooth scroll when navigating to in-page anchors (e.g. #services, #about) */
+html {
+  scroll-behavior: smooth;
+}
